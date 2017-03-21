@@ -46,17 +46,7 @@
                         <h2>Join Us</h2>
                     </div>
                     <div class="col-xs-8">
-                        <p>
-                            <form method="post" action="">{% csrf_token %}
-                                <!-- {{ form.as_p }} -->
-                                <div class="input-group">
-                                    <input type="email" name="email" placeholder="Your Email" class="form-control">
-                                    <span class="input-group-btn">
-                                        <input type="submit" value="Join" class="btn btn-primary">
-                                    </span>
-                                </div><!-- /input-group -->
-                            </form>
-                        </p>
+                        {% include 'pages/snippet/join-form.html' with form=form %}
                     </div>
                 </div>
             </div>
