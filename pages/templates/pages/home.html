@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+<style>
 {% block styles %}
     {% if page_obj.nav_color != '#000000' %}
         .navbar-inverse {
@@ -14,6 +15,7 @@
         }
     {% endif %}
 {% endblock %}
+</style>
 
 {% block content %}
 
@@ -22,8 +24,8 @@
     {% endif %}
 
     {% if page_obj.layout == 'stacked' %}
-        {% include 'pages/snippet/stacked-layout.html' with page_obj=page_obj form=form%}
+        {% include 'pages/snippets/stacked-layout.html' with page_obj=page_obj form=form%}
     {% else %}
-        {% include 'pages/snippet/standard-layout.html' with page_obj=page_obj form=form%}
+        {% include 'pages/snippets/standard-layout.html' with page_obj=page_obj form=form%}
     {% endif %}
 {% endblock %}
