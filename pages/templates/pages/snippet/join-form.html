@@ -1,4 +1,10 @@
-<form method="post" action="">{% csrf_token %}
+<form class="join-form" method="post" action="">{% csrf_token %}
+    <div class="alert alert-danger alert-dismissable join-form-alert" style="display:none">
+        <span class="join-form-error"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
     {% if form.non_field_errors %}
         <div class="alert alert-danger alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
