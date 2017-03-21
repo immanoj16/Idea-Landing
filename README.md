@@ -4,7 +4,7 @@ Launching on your own project:
   1. Create & Activate Virtualenv:
         ```
         $ cd ~/desktop
-        $ virtualenv IdeaLanging && cd IdeaLanding
+        $ virtualenv IdeaLanding && cd IdeaLanding
         $ .\Scripts\activate # to activate the virtual environment
         ```
   2. Clone project:
