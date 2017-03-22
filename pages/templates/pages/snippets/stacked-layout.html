@@ -29,16 +29,16 @@
         </div>
     </div>
     <div class="container">
-        {% if page_obj.video_embed %}
+        {% if object.video_embed %}
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <div class="embed-responsive embed-responsive-16by9">
-                        {{ page_obj.video_embed|safe }}
+                        {{ object.video_embed|safe }}
                     </div>
                 </div>
             </div>
         {% endif %}
         <div class="container">
-            {{ page_obj.content|safe }}
+            {{ object.content|safe }}
         </div>
     </div>

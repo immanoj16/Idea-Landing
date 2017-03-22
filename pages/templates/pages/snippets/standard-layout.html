@@ -3,16 +3,16 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <h1>{{ page_obj.title }}</h1>
-                <p>{{ page_obj.title_description|linebreaks }}</p>
+                <h1>{{ object.title }}</h1>
+                <p>{{ object.title_description|linebreaks }}</p>
                 {% if title_btn_url %}
                     <p><a class="btn btn-primary btn-lg" href="{{ title_btn_url }}" role="button">{{ title_btn }}</a></p>
                 {% endif %}
             </div>
-            {% if page_obj.video_embed %}
+            {% if object.video_embed %}
                 <div class="col-sm-6">
                     <div class="embed-responsive embed-responsive-16by9">
-                        {{ page_obj.video_embed|safe }}
+                        {{ object.video_embed|safe }}
                     </div>
                 </div>
             {% endif %}
@@ -35,6 +35,6 @@
         </div>
     </div>
     <div class="container">
-        {{ page_obj.content|safe }}
+        {{ object.content|safe }}
     </div>
 </div>

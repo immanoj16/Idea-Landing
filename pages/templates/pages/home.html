@@ -2,13 +2,13 @@
 
 <style>
 {% block styles %}
-    {% if page_obj.nav_color != '#000000' %}
+    {% if object.nav_color != '#000000' %}
         .navbar-inverse {
-            background-color: {{ page_obj.nav_color }};
-            border: {{ page_obj.nav_color }};
+            background-color: {{ object.nav_color }};
+            border: {{ object.nav_color }};
         }
     {% endif %}
-    {% if not page_obj.show_nav %}
+    {% if not object.show_nav %}
         body {
             padding-top: 0px;
             padding-bottom: 0px;
@@ -19,13 +19,13 @@
 
 {% block content %}
 
-    {% if page_obj.show_nav %}
+    {% if object.show_nav %}
         {% include 'navbar.html' %}
     {% endif %}
 
-    {% if page_obj.layout == 'stacked' %}
-        {% include 'pages/snippets/stacked-layout.html' with page_obj=page_obj form=form%}
+    {% if object.layout == 'stacked' %}
+        {% include 'pages/snippets/stacked-layout.html' with object=object form=form%}
     {% else %}
-        {% include 'pages/snippets/standard-layout.html' with page_obj=page_obj form=form%}
+        {% include 'pages/snippets/standard-layout.html' with object=object form=form%}
     {% endif %}
 {% endblock %}
