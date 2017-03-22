@@ -28,4 +28,8 @@
     {% else %}
         {% include 'pages/snippets/standard-layout.html' with object=object form=form%}
     {% endif %}
+
+    {% if object.leave_capture %}
+        <span class="leave-capture" show="true"></span>
+    {% endif %}
 {% endblock %}
