@@ -2,6 +2,11 @@
  * Globals
  */
 
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 /* Links */
 a,
 a:focus,
