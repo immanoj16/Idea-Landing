@@ -17,7 +17,7 @@ class HomeView(SuccessMessageMixin, CreateView):
     success_url = '/'
 
     def get_context_data(self, *args, **kwargs):
-        context = super(HomeView, self).get_context_data(*args, **kwargs)
+        context = super(HomeView, self).get_context_data()
         context['object'] = Page.objects.filter(featured=True).first()  # order_by("?").first()
         return context
 

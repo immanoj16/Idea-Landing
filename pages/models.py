@@ -4,13 +4,14 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models.signals import pre_save
 
+from .utils import unique_slug_generator
+
 
 LAYOUT_CHOICES = (
     ('standard', 'Standard'),
     ('stacked', 'Stacked'),
 )
 
-from .utils import unique_slug_generator
 
 def layout_validator(value):
     if value[0] == "#":
